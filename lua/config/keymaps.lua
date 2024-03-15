@@ -1,5 +1,8 @@
 local mapKey = require("utils.keymapper").mapKey
 
+-- Lsp
+mapKey("gh", ":lua vim.lsp.buf.hover()<CR>")
+
 -- Buffer
 mapKey("<leader>w", ":BufDel<CR>")
 
