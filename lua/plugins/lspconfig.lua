@@ -1,11 +1,12 @@
 return {
-  -- "neovim/nvim-lspconfig",
-  -- ---@class PluginLspOpts
-  -- opts = {
-  --   ---@type lspconfig.options
-  --   servers = {
-  --     -- pyright will be automatically installed with mason and loaded with lspconfig
-  --     pyright = {},
-  --   },
-  -- },
+  "nvim-lspconfig",
+  opts = {
+    servers = {
+      ruff_lsp = {
+        on_attach = function(client, _)
+          client.server_capabilities.hoverProvider = false
+        end,
+      },
+    },
+  },
 }

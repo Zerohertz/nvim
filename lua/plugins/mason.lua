@@ -2,13 +2,17 @@ return {
   "williamboman/mason.nvim",
   opts = {
     ensure_installed = {
+      -- Lua --
       "stylua",
-      -- "ruff",
-      -- "pyright",
+
+      -- Python --
       -- "mypy",
       -- "pylint",
       "isort",
       "black",
+
+      -- Markdown --
+      "markdownlint",
     },
   },
 }

@@ -31,7 +31,7 @@ return {
     opts.root_dir = opts.root_dir
       or require("null-ls.utils").root_pattern(".null-ls-root", ".neoconf.json", "Makefile", ".git")
     opts.sources = vim.list_extend(opts.sources or {}, {
-      -- nls.builtins.diagnostics.ruff,
+      -- Python --
       -- nls.builtins.diagnostics.mypy,
       -- nls.builtins.diagnostics.pylint.with({
       --   diagnostics_postprocess = function(diagnostic)
@@ -40,6 +40,9 @@ return {
       -- }),
       nls.builtins.formatting.isort,
       nls.builtins.formatting.black,
+
+      -- Markdown --
+      nls.builtins.formatting.markdownlint,
     })
   end,
 }
