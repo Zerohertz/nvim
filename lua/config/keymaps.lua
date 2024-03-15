@@ -1,7 +1,3 @@
--- Keymaps are automatically loaded on the VeryLazy event
--- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
--- Add any additional keymaps here
-
 local mapKey = require("utils.keymapper").mapKey
 
 -- Buffer
@@ -10,7 +6,13 @@ mapKey("<leader>w", ":BufDel<CR>")
 -- Neotree toggle
 mapKey("<leader>e", ":Neotree toggle<CR>")
 
--- Pane navigation
+-- Window control
+mapKey("<C-a>", "<C-w>>") -- Left
+mapKey("<C-s>", "<C-w>-") -- Down
+mapKey("<C-w>", "<C-w>+") -- Up
+mapKey("<C-d>", "<C-w><") -- Right
+
+-- Window navigation
 mapKey("<C-h>", "<C-w>h") -- Left
 mapKey("<C-j>", "<C-w>j") -- Down
 mapKey("<C-k>", "<C-w>k") -- Up
