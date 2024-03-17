@@ -1,5 +1,8 @@
 local mapKey = require("utils.keymapper").mapKey
 
+-- Clipboard
+mapKey("<leader>y", '"+y', "v")
+
 -- Lsp
 mapKey("gh", ":lua vim.lsp.buf.hover()<CR>")
 
