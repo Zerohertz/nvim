@@ -9,8 +9,11 @@ mapKey("gh", ":lua vim.lsp.buf.hover()<CR>")
 -- Buffer
 mapKey("<leader>w", ":BufDel<CR>")
 
--- Neotree toggle
+-- Neotree
 mapKey("<leader>e", ":Neotree toggle<CR>")
+
+-- Telescope
+mapKey("<leader>fl", ":Telescope live_grep<CR>")
 
 -- Window control
 mapKey("<C-a>", "<C-w>>") -- Left
