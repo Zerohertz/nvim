@@ -6,6 +6,8 @@ mapKey("<leader>y", '"+y', "v")
 -- Cursor
 mapKey("!", "^")
 mapKey("@", "$")
+mapKey("!", "^", "v")
+mapKey("@", "$", "v")
 
 -- Lsp
 mapKey("gh", ":lua vim.lsp.buf.hover()<CR>")
