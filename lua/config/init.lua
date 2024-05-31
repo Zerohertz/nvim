@@ -31,5 +31,4 @@ require("lazy").setup({
     lazy = false,
     version = false,
   },
-  checker = { enabled = true },
 })
