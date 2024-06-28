@@ -23,6 +23,9 @@ return {
       -- Docker --
       "hadolint",
 
+      -- HTML --
+      "prettier",
+
       -- Markdown --
       "markdownlint",
     },

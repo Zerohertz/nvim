@@ -41,6 +41,9 @@ return {
       nls.builtins.formatting.isort,
       nls.builtins.formatting.black,
 
+      -- HTML --
+      nls.builtins.formatting.prettier,
+
       -- Markdown --
       nls.builtins.formatting.markdownlint,
     })
