@@ -12,3 +12,10 @@ vim.g.clipboard = {
     ["*"] = require("vim.ui.clipboard.osc52").paste("*"),
   },
 }
+
+vim.api.nvim_create_autocmd("BufWritePost", {
+  pattern = "*.java",
+  callback = function()
+    vim.cmd("lua require'jdtls'.organize_imports()")
+  end,
+})
