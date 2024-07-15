@@ -21,7 +21,7 @@ require("lazy").setup({
     -- Dashboard --
     { "goolord/alpha-nvim", enabled = false },
     {
-      "glepnir/dashboard-nvim",
+      "nvimdev/dashboard-nvim",
       event = "VimEnter",
       config = function()
         require("dashboard").setup({
@@ -46,12 +46,12 @@ require("lazy").setup({
             },
             project = {
               enable = true,
-              limit = 30,
+              limit = 12,
               icon = "🌲",
               label = " Recently Projects",
               action = "Telescope find_files cwd=",
             },
-            mru = { limit = 30, icon = "📚", label = " Recent Files", cwd_only = true },
+            mru = { limit = 12, icon = "📚", label = " Recent Files", cwd_only = true },
             footer = {
               "",
               "",
