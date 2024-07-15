@@ -1,7 +1,7 @@
 return {
   {
     "echasnovski/mini.comment",
-    version = false,
+    version = "*",
     config = function()
       require("mini.comment").setup(
         -- No need to copy this inside `setup()`. Will be used automatically.
@@ -49,5 +49,4 @@ return {
       )
     end,
   },
-  { "echasnovski/mini.nvim", version = false },
 }

@@ -34,4 +34,7 @@ mapKey("<C-k>", "<C-w>k") -- Up
 mapKey("<C-l>", "<C-w>l") -- Right
 
 -- Clear search highlights
-mapKey("<leader>h", ":nohlsearch<CR>")
+-- mapKey("<leader>h", ":nohlsearch<CR>")
+
+-- Check health
+mapKey("<leader>h", ":checkhealth<CR>")

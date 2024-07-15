@@ -1,5 +1,7 @@
 return {
-  { "folke/which-key.nvim", tag = "v2.1.0" },
+  { "folke/which-key.nvim" },
   { "folke/neoconf.nvim", cmd = "Neoconf" },
-  "folke/neodev.nvim",
+  { "folke/neodev.nvim" },
+  { "akinsho/bufferline.nvim" },
+  { "ojroques/nvim-bufdel" },
 }
