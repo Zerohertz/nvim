@@ -16,7 +16,7 @@ require("config.globals")
 
 require("lazy").setup({
   spec = {
-    { "LazyVim/LazyVim", import = "lazyvim.plugins", opts = { colorscheme = "midnight" } },
+    { "LazyVim/LazyVim", import = "lazyvim.plugins", opts = { colorscheme = "catppuccin" } },
 
     -- Dashboard --
     { "goolord/alpha-nvim", enabled = false },
