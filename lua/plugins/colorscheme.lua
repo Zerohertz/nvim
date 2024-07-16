@@ -17,16 +17,16 @@ return {
           yellow = "#f0f00a", -- git edit
           green = "#0af00a", -- git -, string
           peach = "#f00af0", -- val
+          sky = "#0af0f0", -- operator
 
           -- a0 + 0a --
           blue = "#a00a0a", -- functions, method
           lavender = "#a00a0a", -- property
-          sky = "#0aa00a", -- operator
 
-          -- ff + 55 --
-          maroon = "#ff5555", -- inputs
-          mauve = "#55ff55", -- keywords (class, def, with, ...)
-          sapphire = "#5555ff", -- __init__
+          -- f0 + a0 --
+          maroon = "#f0a0a0", -- inputs
+          mauve = "#a0f0a0", -- keywords (class, def, with, ...)
+          sapphire = "#a0a0f0", -- __init__
 
           -- grey --
           mantle = "#0f0f0f", -- neo-tree background
