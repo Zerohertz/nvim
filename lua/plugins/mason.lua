@@ -5,9 +5,25 @@ return {
       -- Shell --
       "shfmt",
 
-      -- Lua --
-      "lua-language-server",
-      "stylua",
+      -- C++ --
+      "clangd",
+      "cmakelang",
+      "cmakelint",
+      "neocmakelsp",
+
+      -- Rust --
+      "codelldb",
+
+      -- Go --
+      "gofumpt",
+      "goimports",
+      "gomodifytags",
+      "gopls",
+      "impl",
+
+      -- Java --
+      "java-test",
+      "jdtls",
 
       -- Python --
       "black",
@@ -17,35 +33,25 @@ return {
       -- "mypy",
       -- "pylint",
 
-      -- Go --
-      "gofumpt",
-      "goimports",
-      "gomodifytags",
-      "gopls",
-      "impl",
-
-      -- C, C++ --
-      "clangd",
-
-      -- Java --
-      "java-test",
-      "jdtls",
+      -- SQL --
+      "sqlfluff",
 
       -- Docker --
-      "hadolint",
       "docker-compose-language-service",
       "dockerfile-language-server",
+      "hadolint",
 
-      -- HTML --
-      "prettier",
-
-      -- Markdown --
-      "markdownlint",
-
-      -- JSON --
+      -- Etc --
+      "helm-ls",
       "json-lsp",
-
-      -- YAML --
+      "lua-language-server",
+      "markdownlint",
+      "prettier",
+      "stylua",
+      "taplo",
+      "terraform-ls",
+      "tflint",
+      "vtsls",
       "yaml-language-server",
     },
   },
