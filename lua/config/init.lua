@@ -66,15 +66,41 @@ require("lazy").setup({
     },
 
     -- LSP --
-    -- { import = "lazyvim.plugins.extras.lang.python" },
-    { import = "lazyvim.plugins.extras.lang.go" },
+
+    -- C++ --
     { import = "lazyvim.plugins.extras.lang.clangd" },
+    { import = "lazyvim.plugins.extras.lang.cmake" },
+
+    -- Rust --
+    { import = "lazyvim.plugins.extras.lang.rust" },
+
+    -- Go --
+    { import = "lazyvim.plugins.extras.lang.go" },
+
+    -- Java --
     { import = "lazyvim.plugins.extras.lang.java" },
+
+    -- Python --
+    -- { import = "lazyvim.plugins.extras.lang.python" },
+
+    -- TypeScript --
+    { import = "lazyvim.plugins.extras.lang.typescript" },
+
+    -- SQL --
+    { import = "lazyvim.plugins.extras.lang.sql" },
+
+    -- Docker --
     { import = "lazyvim.plugins.extras.lang.docker" },
-    -- { import = "lazyvim.plugins.extras.lang.markdown" },
-    -- { import = "lazyvim.plugins.extras.lang.toml" },
+
+    -- Etc --
+    { import = "lazyvim.plugins.extras.lang.git" },
+    { import = "lazyvim.plugins.extras.lang.terraform" },
     { import = "lazyvim.plugins.extras.lang.json" },
     { import = "lazyvim.plugins.extras.lang.yaml" },
+    { import = "lazyvim.plugins.extras.lang.helm" },
+    { import = "lazyvim.plugins.extras.lang.toml" },
+    -- { import = "lazyvim.plugins.extras.lang.markdown" },
+
     { import = "lazyvim.plugins.extras.lsp.none-ls" },
     { import = "plugins" },
   },
