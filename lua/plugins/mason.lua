@@ -22,6 +22,7 @@ return {
       "impl",
 
       -- Java --
+      "gradle-language-server",
       "java-test",
       "jdtls",
 
