@@ -38,3 +38,6 @@ mapKey("<C-l>", "<C-w>l") -- Right
 
 -- Check health
 mapKey("<leader>h", ":checkhealth<CR>")
+
+-- Git diff
+mapKey("<leader>gd", ":Gitsigns diffthis<CR>")
