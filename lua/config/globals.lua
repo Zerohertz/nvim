@@ -4,25 +4,20 @@ local function is_ssh()
   return ssh_client ~= nil or ssh_tty ~= nil
 end
 
-local function is_docker()
-  local docker_env = vim.env.DOCKER_ENV
-  local docker_cgroup = io.open("/proc/1/cgroup", "r")
-  if docker_cgroup then
-    for line in docker_cgroup:lines() do
-      if line:match("docker") then
-        docker_cgroup:close()
-        return true
-      end
-    end
-    docker_cgroup:close()
+local function is_container()
+  if vim.fn.filereadable("/.dockerenv") == 1 then
+    return true
   end
-  return docker_env ~= nil
+  if os.getenv("KUBERNETES_SERVICE_HOST") then
+    return true
+  end
+  return false
 end
 
 vim.g.mapleader = " " -- global leader
 vim.g.maplocalleader = " " -- local leader
 
-if is_ssh() or is_docker() then
+if is_ssh() or is_container() then
   vim.g.clipboard = {
     name = "OSC 52",
     copy = {
