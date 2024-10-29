@@ -26,12 +26,6 @@ require("lazy").setup({
       config = function()
         require("dashboard").setup({
           theme = "hyper",
-          -- preview = {
-          --   command = "cat",
-          --   file_path = "~/.config/nvim/.header",
-          --   file_height = 8,
-          --   file_width = 80,
-          -- },
           config = {
             header = {
               "███████╗███████╗██████╗  ██████╗ ██╗  ██╗███████╗██████╗ ████████╗███████╗",
@@ -43,6 +37,12 @@ require("lazy").setup({
             },
             shortcut = {
               { desc = "[ https://github.com/Zerohertz]", group = "Label" },
+              {
+                desc = "[💽 dadbod-ui]",
+                group = "Label",
+                action = "DBUI",
+                key = "d",
+              },
             },
             project = {
               enable = true,
@@ -51,7 +51,7 @@ require("lazy").setup({
               label = " Recently Projects",
               action = "Telescope find_files cwd=",
             },
-            mru = { limit = 12, icon = "📚", label = " Recent Files", cwd_only = true },
+            mru = { limit = 12, icon = "📚", label = " Recent Files", cwd_only = false },
             footer = {
               "",
               "",
