@@ -47,3 +47,9 @@ $ ln -sf ${PWD}/nvim ${HOME}/.config/nvim
   - `c`: Ask for confirmation first
   - `i`: Case insensitive
 - `:JdtUpdateConfig`: `build.gradle`의 의존성 수정 후 `jdtls`의 update를 원할 때 사용
+
+---
+
+### References
+
+- [VimAwesome](https://vimawesome.com/)
