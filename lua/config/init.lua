@@ -83,7 +83,7 @@ require("lazy").setup({
     -- Python --
     -- { import = "lazyvim.plugins.extras.lang.python" },
 
-    -- TypeScript --
+    -- JavaScript & TypeScript --
     { import = "lazyvim.plugins.extras.lang.typescript" },
 
     -- SQL --

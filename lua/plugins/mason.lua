@@ -37,6 +37,9 @@ return {
       -- SQL --
       "sqlfluff",
 
+      -- JavaScript & TypeScript --
+      "eslint-lsp",
+
       -- Docker --
       "docker-compose-language-service",
       "dockerfile-language-server",
