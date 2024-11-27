@@ -41,3 +41,6 @@ mapKey("<leader>h", ":checkhealth<CR>")
 
 -- Git diff
 mapKey("<leader>gd", ":Gitsigns diffthis<CR>")
+
+-- Notifier history
+mapKey("<leader>n", ":lua Snacks.notifier.show_history(opts)<CR>")
