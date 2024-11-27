@@ -31,7 +31,7 @@ return {
           -- grey --
           mantle = "#0f0f0f", -- neo-tree background
           surface0 = "#333333", -- cursor
-          surface1 = "#555555", -- code line
+          surface1 = "#303030", -- code line
           overlay2 = "#a0a0a0", -- ., ,, (), {}, []
           pink = "#c0c0c0", -- f{}
 
