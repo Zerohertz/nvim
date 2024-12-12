@@ -12,6 +12,9 @@ return {
           client.server_capabilities.hoverProvider = false
         end,
       },
+      clangd = {
+        filetypes = { "c", "cpp", "objc", "objcpp", "cuda" },
+      },
     },
   },
 }

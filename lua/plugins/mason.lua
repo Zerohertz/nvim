@@ -34,16 +34,19 @@ return {
       -- "mypy",
       -- "pylint",
 
-      -- SQL --
-      "sqlfluff",
-
       -- JavaScript & TypeScript --
       "eslint-lsp",
+
+      -- SQL --
+      "sqlfluff",
 
       -- Docker --
       "docker-compose-language-service",
       "dockerfile-language-server",
       "hadolint",
+
+      -- gRPC --
+      "buf",
 
       -- Etc --
       "helm-ls",

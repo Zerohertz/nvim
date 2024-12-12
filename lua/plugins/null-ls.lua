@@ -41,6 +41,10 @@ return {
       nls.builtins.formatting.isort,
       nls.builtins.formatting.black,
 
+      -- gRPC --
+      nls.builtins.diagnostics.buf,
+      nls.builtins.formatting.buf,
+
       -- HTML --
       nls.builtins.formatting.prettier,
 
