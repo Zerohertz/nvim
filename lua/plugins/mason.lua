@@ -30,7 +30,7 @@ return {
       "black",
       "isort",
       "pyright",
-      "ruff-lsp",
+      "ruff",
       -- "mypy",
       -- "pylint",
 

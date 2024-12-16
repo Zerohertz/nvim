@@ -7,7 +7,7 @@ return {
           ["textDocument/publishDiagnostics"] = function() end,
         },
       },
-      ruff_lsp = {
+      ruff = {
         on_attach = function(client, _)
           client.server_capabilities.hoverProvider = false
         end,
