@@ -18,9 +18,6 @@ mapKey("<leader>w", ":BufDel<CR>")
 -- Neotree
 mapKey("<leader>e", ":Neotree toggle<CR>")
 
--- Telescope
-mapKey("<leader>fl", ":Telescope live_grep<CR>")
-
 -- Window control
 mapKey("<C-a>", "<C-w>>") -- Left
 mapKey("<C-s>", "<C-w>-") -- Down
