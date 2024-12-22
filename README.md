@@ -2,6 +2,7 @@
     <h2>
         🌝 Neovim Config 🌝
     </h2>
+    <img width="1773" alt="neovim" src="https://github.com/user-attachments/assets/15110871-bc98-4d9a-a855-c975638bb45a" />
 </div>
 
 <!--markdownlint-disable-->
