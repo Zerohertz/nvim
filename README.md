@@ -2,21 +2,47 @@
     <h2>
         🌝 Neovim Config 🌝
     </h2>
-    <img width="1773" alt="neovim" src="https://github.com/user-attachments/assets/15110871-bc98-4d9a-a855-c975638bb45a" />
 </div>
 
 <!--markdownlint-disable-->
 
 ```sh
 $ brew install font-hack-nerd-font
-$ ln -sf ${PWD}/nvim ${HOME}/.config/nvim
+$ mkdir -p $(HOME)/.config && rm -rf $(HOME)/.config/nvim
+$ ln -sf $(PWD)/.config/nvim $(HOME)/.config/nvim
+$ cd $(PWD)/.config/nvim && git switch main && git pull origin main
 ```
 
 <!--markdownlint-enable-->
 
----
+<div align="center">
+    <img width="1773" alt="neovim" src="https://github.com/user-attachments/assets/15110871-bc98-4d9a-a855-c975638bb45a" />
+</div>
 
-### [`keymaps`](lua/config/keymaps.lua)
+<h4 align = "center">
+    <a href="https://hub.docker.com/r/zerohertzkr/dev">🐳 Docker 🐳</a>
+    <br/>
+    <br/>
+    <a href = "https://hub.docker.com/r/zerohertzkr/dev"><img src="https://img.shields.io/docker/v/zerohertzkr/dev?style=for-the-badge&logo=Docker&label=zerohertzkr/dev&labelColor=800a0a"/></a>
+</h4>
+
+<!-- markdownlint-disable -->
+
+```bash
+$ docker run \
+        --name $name \
+        --platform linux/amd64 \
+        -v ./:/home/zerohertz/workspace \
+        --rm -d \
+        zerohertzkr/dev
+$ docker exec -it $name zsh
+```
+
+<!-- markdownlint-enable -->
+
+<h4 align = "center">
+    <a href="lua/config/keymaps.lua">⌨ <code>keymaps</code> ⌨</a>
+</h4>
 
 <div align="right"><code>&lt;leader&gt;</code>: <code>Space</code></div>
 
@@ -41,7 +67,9 @@ $ ln -sf ${PWD}/nvim ${HOME}/.config/nvim
 
 </div>
 
-### Commands
+<h4 align = "center">
+    👾 Commands 👾
+</h4>
 
 - `:%s/{FIND_STRING}/{REPLACE_STRING}/g`: 문자열 변경 (~= `sed`)
   - `g`: Global search
@@ -54,6 +82,8 @@ $ ln -sf ${PWD}/nvim ${HOME}/.config/nvim
 
 ---
 
-### References
+<h4 align = "center">
+    📜 References 📜
+</h4>
 
 - [VimAwesome](https://vimawesome.com/)
