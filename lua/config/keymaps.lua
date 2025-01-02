@@ -9,6 +9,9 @@ mapKey("@", "$")
 mapKey("!", "^", "v")
 mapKey("@", "$", "v")
 
+-- Mark
+mapKey("dm", ":delm!<CR>")
+
 -- Lsp
 mapKey("gh", ":lua vim.lsp.buf.hover()<CR>")
 
