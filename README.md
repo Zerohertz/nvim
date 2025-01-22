@@ -62,6 +62,7 @@ $ docker exec -it $name zsh
 |          <code>&lt;leader&gt;</code> + `f` + `l`          | `NORMAL` | Open [Telescope](https://github.com/nvim-telescope/telescope.nvim)                                                                                                               |
 | <code>&lt;leader&gt;</code> + <code>&lt;leader&gt;</code> | `NORMAL` | Open Find File                                                                                                                                                                   |
 |          <code>&lt;leader&gt;</code> + `g` + `g`          | `NORMAL` | Open [LazyGit](https://github.com/jesseduffield/lazygit)                                                                                                                         |
+|          <code>&lt;leader&gt;</code> + `u` + `f`          | `NORMAL` | Enable/Disable auto format                                                                                                                                                       |
 |          <code>&lt;leader&gt;</code> + `u` + `n`          | `NORMAL` | Dissmiss All Notifications                                                                                                                                                       |
 |             <code>&lt;leader&gt;</code> + `y`             | `VISUAL` | Copying to the Clipboard in an SSH Environment Using [OSC 52](https://sw.kovidgoyal.net/kitty/clipboard/)                                                                        |
 
