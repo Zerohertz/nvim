@@ -1,1 +1,22 @@
+-- NOTE:
+-- INFO:
+-- TODO:
+-- PERF:
+-- OPTIM:
+-- PERFORMANCE:
+-- OPTIMIZE:
+-- TEST:
+-- TESTING:
+-- PASSED:
+-- FAILED:
+-- HACK:
+-- WARN:
+-- WARNING:
+-- XXX:
+-- FIX:
+-- FIXME:
+-- BUG:
+-- FIXIT:
+-- ISSUE:
+
 require("config")
