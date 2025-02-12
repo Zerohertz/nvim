@@ -17,7 +17,7 @@ cpp:
 
 .PHONY: cmake
 cmake:
-	cmake cmake && cd cmake && make && ./main && rm ./main
+	cd cmake && rm -rf build && mkdir build && cd build && cmake .. && make && ./main && rm ./main
 
 .PHONY: rust
 rust:
