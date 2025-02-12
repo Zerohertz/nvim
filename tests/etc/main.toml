@@ -1,0 +1,98 @@
+[project]
+name = "fastapi-cookbook"
+version = "0.1.1"
+description = "💨 Zerohertz's FastAPI Cookbook 💨"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "alembic>=1.14.0",
+    "asyncpg>=0.30.0",
+    "dependency-injector>=4.45.0",
+    "fastapi>=0.115.6",
+    "httpx>=0.28.1",
+    "loguru>=0.7.3",
+    "orjson>=3.10.15",
+    "passlib>=1.7.4",
+    "pydantic-settings>=2.7.1",
+    "pydantic[email]>=2.10.5",
+    "python-jose>=3.3.0",
+    "python-multipart>=0.0.20",
+    "pytz>=2024.2",
+    "sqlalchemy>=2.0.38",
+    "uv>=0.5.21",
+    "uvicorn[standard]>=0.34.0",
+]
+
+[dependency-groups]
+lint = [
+    "black>=24.10.0",
+    "isort>=5.13.2",
+    "mypy>=1.14.1",
+    "pylint>=3.3.3",
+    "ruff>=0.9.2",
+    "sqlalchemy[mypy]>=2.0.38",
+    "types-passlib>=1.7.7.20241221",
+    "types-python-jose>=3.3.4.20240106",
+    "types-pytz>=2024.2.0.20241221",
+]
+test = [
+    "pytest>=8.3.4",
+    "pytest-cov>=6.0.0",
+    "pytest-dotenv>=0.5.2",
+    "aiomysql>=0.2.0",
+    "aiosqlite>=0.20.0",
+    "cryptography>=44.0.0",
+    "pytest-asyncio>=0.25.3",
+    "faker>=35.0.0",
+]
+
+[tool.mypy]
+plugins = ["sqlalchemy.ext.mypy.plugin"]
+
+[tool.pylint]
+disable = [
+    "C0103",
+    "C0114",
+    "C0115",
+    "C0116",
+    "C0301",
+    "E0611",
+    "E1102",
+    "R0801",
+    "R0903",
+    "R0913",
+    "W0221",
+    "W0511",
+    "W0622",
+    "W0718",
+    "E1136",
+]
+# C0103: Class name "*" doesn't conform to PascalCase naming style (invalid-name)
+# C0114: Missing module docstring (missing-module-docstring)
+# C0115: Missing class docstring (missing-class-docstring)
+# C0116: Missing function or method docstring (missing-function-docstring)
+# C0301: Line too long (*/*) (line-too-long)
+# E0611: No name '*' in module '*' (no-name-in-module)
+# E1102: * is not callable (not-callable)
+# R0801: Similar lines in * files
+# R0903: Too few public methods (*/*) (too-few-public-methods)
+# R0913: Too many arguments (*/*) (too-many-arguments)
+# W0221: Number of parameters was * in '*' and is now * in overriding '*' method (arguments-differ)
+# W0221: Variadics removed in overriding '*' method (arguments-differ)
+# W0511: TODO, FIXME
+# W0622: Redefining built-in '*' (redefined-builtin)
+# W0718: Catching too general exception Exception (broad-exception-caught)
+# FIXME: GitHub Actions에서 local과 다르게 아래 오류가 자꾸 발생함...
+# https://github.com/Zerohertz/fastapi-cookbook/actions/runs/13266710505/job/37035854489
+# E1136: Value 'Mapped' is unsubscriptable (unsubscriptable-object)
+
+[tool.isort]
+profile = "black"
+
+[tool.black]
+target-version = ["py312"]
+
+[tool.pytest.ini_options]
+env_files = ["envs/test.env"]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"

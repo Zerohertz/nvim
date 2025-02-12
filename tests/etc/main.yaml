@@ -1,0 +1,112 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fastapi
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: fastapi
+  template:
+    metadata:
+      labels:
+        app: fastapi
+    spec:
+      containers:
+        - name: fastapi
+          image: zerohertzkr/fastapi-cookbook:v0.1.2
+          env:
+            - name: DB_TYPE
+              valueFrom:
+                configMapKeyRef:
+                  name: postgresql
+                  key: TYPE
+            - name: DB_DRIVER
+              valueFrom:
+                configMapKeyRef:
+                  name: postgresql
+                  key: DRIVER
+            - name: DB_HOST
+              valueFrom:
+                configMapKeyRef:
+                  name: postgresql
+                  key: HOST
+            - name: DB_PORT
+              valueFrom:
+                configMapKeyRef:
+                  name: postgresql
+                  key: PORT
+            - name: DB_USER
+              valueFrom:
+                secretKeyRef:
+                  name: postgresql
+                  key: USER_NAME
+            - name: DB_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: postgresql
+                  key: USER_PASSWORD
+            - name: DB_NAME
+              valueFrom:
+                configMapKeyRef:
+                  name: postgresql
+                  key: DATABASE
+            - name: GOOGLE_OAUTH_CLIENT_ID
+              valueFrom:
+                secretKeyRef:
+                  name: auth
+                  key: GOOGLE_OAUTH_CLIENT_ID
+            - name: GOOGLE_OAUTH_CLIENT_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: auth
+                  key: GOOGLE_OAUTH_CLIENT_SECRET
+            - name: GITHUB_OAUTH_CLIENT_ID
+              valueFrom:
+                secretKeyRef:
+                  name: auth
+                  key: GITHUB_OAUTH_CLIENT_ID_PROD
+            - name: GITHUB_OAUTH_CLIENT_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: auth
+                  key: GITHUB_OAUTH_CLIENT_SECRET_PROD
+            - name: JWT_SECRET_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: auth
+                  key: JWT_SECRET_KEY
+            - name: JWT_ALGORITHM
+              valueFrom:
+                secretKeyRef:
+                  name: auth
+                  key: JWT_ALGORITHM
+            - name: ADMIN_NAME
+              valueFrom:
+                secretKeyRef:
+                  name: auth
+                  key: ADMIN_NAME
+            - name: ADMIN_EMAIL
+              valueFrom:
+                secretKeyRef:
+                  name: auth
+                  key: ADMIN_EMAIL
+            - name: ADMIN_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: auth
+                  key: ADMIN_PASSWORD
+          ports:
+            - name: http
+              containerPort: 8000
+          volumeMounts:
+            - name: fastapi-prod-env-volume
+              mountPath: /workspace/envs/prod.env
+              subPath: prod.env
+      volumes:
+        - name: fastapi-prod-env-volume
+          configMap:
+            name: fastapi-env
+            items:
+              - key: prod.env
+                path: prod.env
