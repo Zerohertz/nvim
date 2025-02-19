@@ -38,6 +38,8 @@ require("lazy").setup({
 
     -- JavaScript & TypeScript --
     { import = "lazyvim.plugins.extras.lang.typescript" },
+    { import = "lazyvim.plugins.extras.lang.svelte" },
+    { import = "lazyvim.plugins.extras.lang.tailwind" },
 
     -- SQL --
     { import = "lazyvim.plugins.extras.lang.sql" },
