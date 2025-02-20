@@ -13,6 +13,7 @@ mapKey("@", "$", "v")
 mapKey("dm", ":delm!<CR>")
 
 -- Lsp
+mapKey("<leader>r", vim.lsp.buf.rename)
 mapKey("gh", ":lua vim.lsp.buf.hover()<CR>")
 
 -- Buffer
