@@ -1,14 +1,10 @@
-local function is_copilot_authenticated()
-  local ok, copilot = pcall(require, "copilot")
-  if not ok then
-    return "openai"
-  end
-  if type(copilot.is_authenticated) ~= "function" then
-    return "openai"
-  end
-  return "copilot"
+local provider = ""
+-- NOTE: https://github.com/yetone/avante.nvim/blob/ebadba7420a5f9b85829273b8c9cd2be56d9b074/lua/avante/providers/copilot.lua#L107-L113
+if vim.loop.fs_stat(os.getenv("HOME") .. "/.config/github-copilot/apps.json") ~= nil then
+  provider = "copilot"
+else
+  provider = "openai"
 end
-local default_provider = is_copilot_authenticated() and "copilot" or "openai"
 
 return {
   "yetone/avante.nvim",
@@ -18,11 +14,11 @@ return {
   opts = {
     debug = false,
     ---@alias Provider "claude" | "openai" | "azure" | "gemini" | "vertex" | "cohere" | "copilot" | string
-    provider = default_provider,
+    provider = provider,
     -- WARNING: Since auto-suggestions are a high-frequency operation and therefore expensive,
     -- currently designating it as `copilot` provider is dangerous because: https://github.com/yetone/avante.nvim/issues/1048
     -- Of course, you can reduce the request frequency by increasing `suggestion.debounce`.
-    auto_suggestions_provider = default_provider,
+    auto_suggestions_provider = provider,
     cursor_applying_provider = "copilot",
     ---@alias Tokenizer "tiktoken" | "hf"
     -- Used for counting tokens and encoding text.
@@ -271,4 +267,7 @@ return {
     --   ft = { "markdown", "Avante" },
     -- },
   },
+  -- config = function()
+  --   vim.schedule(function() end)
+  -- end,
 }
