@@ -14,7 +14,8 @@ mapKey("dm", ":delm!<CR>")
 
 -- Lsp
 mapKey("<leader>r", vim.lsp.buf.rename)
-mapKey("gh", ":lua vim.lsp.buf.hover()<CR>")
+mapKey("gh", vim.lsp.buf.hover)
+mapKey("<leader>dd", vim.diagnostic.setqflist)
 
 -- Buffer
 mapKey("<leader>w", ":BufDel<CR>")
