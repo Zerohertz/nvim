@@ -12,8 +12,6 @@ return {
   event = "VeryLazy",
   version = false, -- Never set this value to "*"! Never!
   opts = {
-    -- add any opts here
-    -- for example
     provider = provider,
     providers = {
       copilot = {
@@ -22,8 +20,34 @@ return {
         proxy = nil, -- [protocol://]host[:port] Use this proxy
         allow_insecure = false, -- Allow insecure server connections
         timeout = 30000, -- Timeout in milliseconds
-        temperature = 0,
-        max_tokens = 4096,
+        extra_request_body = {
+          temperature = 0.75,
+          max_tokens = 20480,
+        },
+      },
+      claude = {
+        hide_in_model_selector = true,
+      },
+      azure = {
+        hide_in_model_selector = true,
+      },
+      gemini = {
+        hide_in_model_selector = true,
+      },
+      vertex = {
+        hide_in_model_selector = true,
+      },
+      vertex_claude = {
+        hide_in_model_selector = true,
+      },
+      cohere = {
+        hide_in_model_selector = true,
+      },
+      bedrock = {
+        hide_in_model_selector = true,
+      },
+      ollama = {
+        hide_in_model_selector = true,
       },
     },
   },
