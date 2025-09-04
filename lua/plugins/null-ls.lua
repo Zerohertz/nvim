@@ -38,8 +38,8 @@ return {
       --     diagnostic.code = diagnostic.message_id
       --   end,
       -- }),
-      nls.builtins.formatting.isort,
-      nls.builtins.formatting.black,
+      -- nls.builtins.formatting.isort,
+      -- nls.builtins.formatting.black,
 
       -- gRPC --
       nls.builtins.diagnostics.buf,

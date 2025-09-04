@@ -11,8 +11,15 @@ return {
     -- })
     opts.servers = vim.tbl_deep_extend("force", opts.servers or {}, {
       pyright = {
-        handlers = {
-          ["textDocument/publishDiagnostics"] = function() end,
+        settings = {
+          pyright = {
+            disableOrganizeImports = true,
+          },
+          python = {
+            analysis = {
+              ignore = {},
+            },
+          },
         },
       },
       ruff = {

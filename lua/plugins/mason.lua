@@ -27,10 +27,10 @@ return {
       "jdtls",
 
       -- Python --
-      "black",
-      "isort",
-      "pyright",
       "ruff",
+      "pyright",
+      -- "isort",
+      -- "black",
       -- "mypy",
       -- "pylint",
 
