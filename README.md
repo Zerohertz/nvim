@@ -2,7 +2,9 @@
     <h2>
         🌝 Neovim Config 🌝
     </h2>
+    <a href="https://deepwiki.com/Zerohertz/nvim"><img src="https://deepwiki.com/badge.svg" alt="Ask DeepWiki"></a>
 </div>
+<br/>
 
 <!--markdownlint-disable-->
 
