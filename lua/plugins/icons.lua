@@ -1,5 +1,5 @@
 return {
-  "echasnovski/mini.icons",
+  "nvim-mini/mini.icons",
   version = "*",
   config = function()
     require("mini.icons").setup({ style = "glyph" })

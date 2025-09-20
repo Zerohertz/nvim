@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "Neovim Docs": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "mcp-remote", "https://gitmcp.io/neovim/neovim"],
+      "env": {}
+    },
+    "LazyVim Docs": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "mcp-remote", "https://gitmcp.io/LazyVim/LazyVim"],
+      "env": {}
+    }
+  }
+}

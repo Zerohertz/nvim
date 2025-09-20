@@ -16,7 +16,17 @@ require("config.globals")
 
 require("lazy").setup({
   spec = {
-    { "LazyVim/LazyVim", import = "lazyvim.plugins", opts = { colorscheme = "catppuccin" } },
+    -- WARN: 최신 버전에선 아래 오류 발생
+    -- Failed to run `config` for bufferline.nvim
+    -- ...re/nvim/lazy/LazyVim/lua/lazyvim/plugins/colorscheme.lua:61: attempt to call field 'get_theme' (a nil value)
+    -- # stacktrace:
+    --   - /LazyVim/lua/lazyvim/plugins/colorscheme.lua:61 _in_ **values**
+    {
+      "LazyVim/LazyVim",
+      version = "14.15.1",
+      import = "lazyvim.plugins",
+      opts = { colorscheme = "catppuccin" },
+    },
 
     -- LSP --
 
