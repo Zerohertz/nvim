@@ -1,5 +1,8 @@
 local opt = vim.opt
 
+-- Interface
+vim.o.shell = "/bin/zsh"
+
 -- Indentation
 opt.tabstop = 4
 opt.shiftwidth = 4
