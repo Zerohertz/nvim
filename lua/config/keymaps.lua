@@ -21,7 +21,8 @@ mapKey("<leader>dd", vim.diagnostic.setqflist)
 mapKey("<leader>w", ":BufDel<CR>")
 
 -- Neotree
-mapKey("<leader>e", ":Neotree toggle<CR>")
+mapKey("<leader>e", ":lua Snacks.explorer.open()<CR>")
+-- mapKey("<leader>e", ":Neotree toggle<CR>")
 
 -- Window control
 mapKey("<C-a>", "<C-w>>") -- Left
