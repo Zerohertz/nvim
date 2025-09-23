@@ -20,6 +20,14 @@ mapKey("<leader>dd", vim.diagnostic.setqflist)
 -- Buffer
 mapKey("<leader>w", ":BufDel<CR>")
 
+-- Tab
+mapKey("tn", ":tabnew<CR>", "n", { desc = "New tab" })
+mapKey("tw", ":tabclose<CR>", "n", { desc = "Close tab" })
+mapKey("tl", ":tabnext<CR>", "n", { desc = "Next tab" })
+mapKey("th", ":tabprev<CR>", "n", { desc = "Previous tab" })
+mapKey("to", ":tabonly<CR>", "n", { desc = "Close other tabs" })
+mapKey("tm", ":tabmove<CR>", "n", { desc = "Move tab" })
+
 -- Neotree
 mapKey("<leader>e", ":lua Snacks.explorer.open()<CR>")
 -- mapKey("<leader>e", ":Neotree toggle<CR>")
