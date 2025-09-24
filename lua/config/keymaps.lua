@@ -55,3 +55,12 @@ mapKey("<leader>gd", ":Gitsigns diffthis<CR>", "n", { desc = "Show git diff" })
 
 -- Notifier history
 mapKey("<leader>n", ":lua Snacks.notifier.show_history(opts)<CR>", "n", { desc = "Show notification history" })
+
+-- Neovide specific keymaps
+if vim.g.neovide then
+  mapKey("<D-v>", '"+p', "n", { desc = "Paste from clipboard" })
+  mapKey("<D-v>", "<C-R>+", "i", { desc = "Paste from clipboard" })
+  mapKey("<D-v>", "<C-R>+", "c", { desc = "Paste from clipboard" })
+  mapKey("<D-v>", "<C-R>+", "t", { desc = "Paste from clipboard" })
+  mapKey("<D-c>", '"+y', "v", { desc = "Copy to clipboard" })
+end
