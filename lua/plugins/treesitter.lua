@@ -65,7 +65,7 @@ return {
         "java",
         "rust",
         "terraform",
-        "latex",
+        -- "latex",
       },
       incremental_selection = {
         enable = true,
