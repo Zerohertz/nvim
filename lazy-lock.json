@@ -47,6 +47,7 @@
   "tokyonight.nvim": { "branch": "main", "commit": "14fd5ff7f84027064724ec3157fe903199e77ded" },
   "trouble.nvim": { "branch": "main", "commit": "748ca2789044607f19786b1d837044544c55e80a" },
   "ts-comments.nvim": { "branch": "main", "commit": "79e4337e4231ff8ca33dab85162b5ee8e78f22ce" },
+  "venv-selector.nvim": { "branch": "main", "commit": "42e8faadf9b819654f29eb1a785797a3a328f301" },
   "vim-dadbod": { "branch": "master", "commit": "6f8b99868fd5560d6eb47f82ca76ec62e3d5ae78" },
   "vim-dadbod-completion": { "branch": "master", "commit": "a8dac0b3cf6132c80dc9b18bef36d4cf7a9e1fe6" },
   "vim-dadbod-ui": { "branch": "master", "commit": "e8b53c0f3aa6e6127ac2a2d2071d9aade6c6e373" },
