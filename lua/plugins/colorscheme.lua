@@ -1,6 +1,7 @@
 -- https://github.com/catppuccin/nvim/blob/main/lua/catppuccin/palettes/mocha.lua
 return {
   "catppuccin/nvim",
+  version = false,
   name = "catppuccin",
   priority = 1000,
   config = function()
