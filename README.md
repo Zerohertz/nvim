@@ -68,6 +68,7 @@ $ docker exec -it $name zsh
 |          <code>&lt;leader&gt;</code> + `u` + `n`          | `NORMAL` | Dissmiss All Notifications                                                                                                                                                       |
 |          <code>&lt;leader&gt;</code> + `d` + `d`          | `NORMAL` | Display diagnostic information                                                                                                                                                   |
 |             <code>&lt;leader&gt;</code> + `y`             | `VISUAL` | Copying to the Clipboard in an SSH Environment Using [OSC 52](https://sw.kovidgoyal.net/kitty/clipboard/)                                                                        |
+|          <code>&lt;leader&gt;</code> + `c` + `v`          | `NORMAL` | Select Python Virtual Environment ([venv-selector](https://github.com/linux-cultist/venv-selector.nvim))                                                                         |
 
 </div>
 
