@@ -1,0 +1,15 @@
+{
+  "name": "svelte-test",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "format": "prettier --write .",
+    "check": "prettier --check ."
+  },
+  "devDependencies": {
+    "prettier": "^3.3.3",
+    "prettier-plugin-svelte": "^3.3.3",
+    "svelte": "^5.0.0"
+  }
+}
