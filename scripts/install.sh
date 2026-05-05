@@ -15,7 +15,7 @@ esac
 
 ARCH="$(uname -m)"
 case "${ARCH}" in
-aarch64) ARCH="arm64" ;; # Linux ARM의 uname 표기를 release 파일명에 맞춤
+aarch64) ARCH="arm64" ;;
 x86_64 | arm64) ;;
 *)
     echo "Unsupported arch: ${ARCH}" >&2
@@ -26,17 +26,20 @@ esac
 TARBALL="nvim-${OS}-${ARCH}.tar.gz"
 URL="https://github.com/neovim/neovim/releases/download/${VERSION}/${TARBALL}"
 
+SUDO=""
+[ "${EUID}" -ne 0 ] && SUDO="sudo"
+
 cd /tmp
 echo "==> Downloading ${URL}"
 curl -fLO "${URL}"
 
 echo "==> Extracting to /opt/nvim"
-sudo rm -rf /opt/nvim
-sudo tar -C /opt -xzf "${TARBALL}"
-sudo mv "/opt/nvim-${OS}-${ARCH}" /opt/nvim
+${SUDO} rm -rf /opt/nvim
+${SUDO} tar -C /opt -xzf "${TARBALL}"
+${SUDO} mv "/opt/nvim-${OS}-${ARCH}" /opt/nvim
 
 echo "==> Symlinking to /usr/local/bin/nvim"
-sudo ln -sf /opt/nvim/bin/nvim /usr/local/bin/nvim
+${SUDO} ln -sf /opt/nvim/bin/nvim /usr/local/bin/nvim
 
 echo "==> Cleanup"
 rm -f "/tmp/${TARBALL}"
