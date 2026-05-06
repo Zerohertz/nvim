@@ -50,11 +50,39 @@ mapKey("<C-l>", "<C-w>l", "n", { desc = "Move to right window" })
 -- Check health
 mapKey("<leader>h", ":checkhealth<CR>", "n", { desc = "Run health check" })
 
--- Git diff
-mapKey("<leader>gd", ":Gitsigns diffthis<CR>", "n", { desc = "Show git diff" })
+-- Git
+local function copy_url(url)
+  vim.fn.setreg("+", url)
+  Snacks.notify("Copied: " .. url, { title = "Git Browse" })
+end
+local function browse_tag(opts)
+  local tag = (vim.fn.system({ "git", "tag", "--points-at", "HEAD" }):match("^[^\n]+")) or ""
+  if tag == "" then
+    return Snacks.notify.warn("No tag at HEAD", { title = "Git Browse" })
+  end
+  Snacks.gitbrowse(vim.tbl_extend("force", { what = "file", branch = tag }, opts or {}))
+end
+
+mapKey("<leader>gb", function()
+  require("gitsigns").blame()
+end, "n", { desc = "Git Blame (split)" })
+mapKey("<leader>gp", function()
+  Snacks.gitbrowse({ what = "permalink", open = copy_url, notify = false })
+end, { "n", "v" }, { desc = "Git Browse (copy/permalink)" })
+mapKey("<leader>gP", function()
+  Snacks.gitbrowse({ what = "permalink" })
+end, { "n", "v" }, { desc = "Git Browse (open/permalink)" })
+mapKey("<leader>gt", function()
+  browse_tag({ open = copy_url, notify = false })
+end, { "n", "v" }, { desc = "Git Browse (copy/tag)" })
+mapKey("<leader>gT", function()
+  browse_tag()
+end, { "n", "v" }, { desc = "Git Browse (open/tag)" })
 
 -- Notifier history
-mapKey("<leader>n", ":lua Snacks.notifier.show_history(opts)<CR>", "n", { desc = "Show notification history" })
+mapKey("<leader>n", function()
+  Snacks.notifier.show_history()
+end, "n", { desc = "Show notification history" })
 
 -- Neovide specific keymaps
 if vim.g.neovide then
